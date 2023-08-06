@@ -13,9 +13,28 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("music_quiz")
 
 
+def print_logo():
+    """
+    Display the ASCII logo for the Music Quiz.
+    """
+
+    logo = r"""
+     ****   ****   **        *     *             *           *****        *        
+    *    * *    *  *         **   **                        *     *          
+    *    * *    * *  ***     * * * * *   *  ***  *  ****    *     * *   * * *****  
+     ****  *    *   *        *  *  * *   * *     * *        *     * *   * *    *   
+    *    * *    *    ***     *     * *   *  ***  * *        *   * * *   * *   *   
+    *    * *    *       *    *     * *   *     * * *        *    *  *   * *  *     
+     ****   ****    ****     *     *  ***  ****  *  ****     **** *  ***  * *****
+    """
+    print(logo)
+
+
+
+
 
 def main():
-
+    print_logo()
 
 
 main()
