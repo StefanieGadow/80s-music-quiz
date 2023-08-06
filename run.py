@@ -85,5 +85,6 @@ def main():
     display_rules()
     question_answer_pairs = get_questions_from_sheet(data);
     score = main_quiz(question_answer_pairs)
+    print(f"Your final score: {score}/10!")
 
 main()
