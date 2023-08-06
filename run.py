@@ -80,11 +80,28 @@ def main_quiz(question_answer_pairs):
     return score
 
 
+def play_again():
+    """
+    Ask the user if they want to play the quiz again.
+    Returns True if the user wants to play again, False otherwise.
+    """
+    continue_play = input("Do you want to play again? (yes/no): ").strip().lower()
+    return continue_play == "yes"
+
+
 def main():
     print_logo()
     display_rules()
-    question_answer_pairs = get_questions_from_sheet(data);
-    score = main_quiz(question_answer_pairs)
-    print(f"Your final score: {score}/10!")
+
+    while True:
+        question_answer_pairs = get_questions_from_sheet(data);
+        score = main_quiz(question_answer_pairs)
+        print(f"Your final score: {score}/10!")
+
+        if play_again():
+            print("Great! Let's play again!\n")
+        else: 
+            print("Thank you for playing. Goodbye!")
+            break
 
 main()
