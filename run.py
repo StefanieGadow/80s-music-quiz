@@ -29,12 +29,22 @@ def print_logo():
     """
     print(logo)
 
-
+def display_rules():
+    """
+    Display the rules for the Music Quiz.
+    """
+    print("----------------------------------------------------")
+    print("Welcome to the 80's Music Quiz!")
+    print("You will be asked 10 questions about 80's music.")
+    print("Each correct answer earns you a point.")
+    print("Are you an 80's music expert?")
+    print("----------------------------------------------------")
 
 
 
 def main():
     print_logo()
+    display_rules()
 
 
 main()
