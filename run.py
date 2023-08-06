@@ -12,6 +12,9 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("music_quiz")
 
+questions = SHEET.worksheet("questions")
+data = questions.get_all_values()
+
 
 def print_logo():
     """
@@ -29,6 +32,7 @@ def print_logo():
     """
     print(logo)
 
+
 def display_rules():
     """
     Display the rules for the Music Quiz.
@@ -41,10 +45,18 @@ def display_rules():
     print("----------------------------------------------------")
 
 
+def get_questions_from_sheet(data):
+    """
+    Fetch questions and correct answers from a Google Sheets document.
+    """
+    question_answer_pairs = [(row[0], row[5]) for row in data[1:]]
+
+    print(question_answer_pairs)
+
 
 def main():
     print_logo()
     display_rules()
-
+    get_questions_from_sheet(data);
 
 main()
