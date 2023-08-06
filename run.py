@@ -52,21 +52,18 @@ def get_questions_from_sheet(data):
     """
     question_answer_pairs = [(row[0], row[5], row[1:5]) 
     for row in data[1:] if row[0] and row[5]]
-    # print(question_answer_pairs)
     return question_answer_pairs
 
 
 def main_quiz(question_answer_pairs):
     score = 0
-    num_questions = 1
-    questions_to_ask = random.sample(question_answer_pairs, num_questions)
-    for question, correct_answer, possible_answers in questions_to_ask:
-        # possible_answers = question[1:5]
-        # correct_answer = question[5]
+    num_questions = 10
+    random.shuffle(question_answer_pairs)
 
+    for i in range(num_questions):
+        question, correct_answer, possible_answers = question_answer_pairs[i]
         print(question)
-        num_questions += 1
-
+       
         random.shuffle(possible_answers)
 
         for i, ans in enumerate(possible_answers, 1):
