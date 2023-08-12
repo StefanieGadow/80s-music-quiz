@@ -65,7 +65,7 @@ def get_user_answer(possible_answers):
     while True:
         try:
             user_answer = int(input("\nYour answer (enter the option"
-                                    " number): "))
+                                    " number): \n"))
             if 1 <= user_answer <= len(possible_answers):
                 return user_answer
             else:
@@ -113,7 +113,7 @@ def play_again():
     Returns True if the user wants to play again, False otherwise.
     """
     while True:
-        continue_play = input("Do you want to play again? (yes/no):"
+        continue_play = input("Do you want to play again? (yes/no):\n"
                               " ").strip().lower()
         if continue_play == "yes":
             return True
