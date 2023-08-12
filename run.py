@@ -40,13 +40,13 @@ def display_rules():
     Display the rules for the Music Quiz.
     """
     print("------------------------------------------------------------------"
-          "---------------\n")
+          "--------------\n")
     print("Welcome to the 80's Music Quiz!")
     print("You will be asked 10 questions about 80's music.")
     print("Each correct answer earns you a point.")
     print("Are you an 80's music expert?\n")
     print("------------------------------------------------------------------"
-          "---------------\n")
+          "--------------\n")
 
 
 def get_questions_from_sheet(data):
@@ -103,7 +103,7 @@ def main_quiz(question_answer_pairs):
         else:
             print(f"\nThe correct answer is: {correct_answer}")
         print("--------------------------------------------------------------"
-              "-------------------\n")
+              "------------------\n")
     return score
 
 
@@ -140,7 +140,7 @@ def main():
             os.system("clear")
             print("Great! Let's play again!\n")
             print("----------------------------------------------------------"
-                  "-----------------------\n")
+                  "----------------------\n")
         else:
             print("Thank you for playing. Goodbye!")
             break
