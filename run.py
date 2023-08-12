@@ -99,8 +99,14 @@ def play_again():
     Ask the user if they want to play the quiz again.
     Returns True if the user wants to play again, False otherwise.
     """
-    continue_play = input("Do you want to play again? (yes/no): ").strip().lower()
-    return continue_play == "yes"
+    while True:
+        continue_play = input("Do you want to play again? (yes/no): ").strip().lower()
+        if continue_play == "yes":
+            return True
+        elif continue_play == "no":
+            return False
+        else:
+            print('Please enter "yes" or "no".')
 
 
 def main():
