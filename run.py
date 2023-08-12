@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
+import os
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -136,6 +137,7 @@ def main():
         print(f"Your final score: {score}/10!\n")
 
         if play_again():
+            os.system("clear")
             print("Great! Let's play again!\n")
             print("----------------------------------------------------------"
                   "-----------------------\n")
