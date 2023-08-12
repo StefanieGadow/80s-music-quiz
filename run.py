@@ -38,12 +38,12 @@ def display_rules():
     """
     Display the rules for the Music Quiz.
     """
-    print("----------------------------------------------------")
+    print("---------------------------------------------------------------------------------\n")
     print("Welcome to the 80's Music Quiz!")
     print("You will be asked 10 questions about 80's music.")
     print("Each correct answer earns you a point.")
-    print("Are you an 80's music expert?")
-    print("----------------------------------------------------")
+    print("Are you an 80's music expert?\n")
+    print("---------------------------------------------------------------------------------\n")
 
 
 def get_questions_from_sheet(data):
@@ -61,7 +61,7 @@ def get_user_answer(possible_answers):
     """
     while True:
         try:
-            user_answer = int(input("Your answer (enter the option numer): "))
+            user_answer = int(input("\nYour answer (enter the option numer): "))
             if 1 <= user_answer <= len(possible_answers):
                 return user_answer
             else: print("Please enter a valid option number.")
@@ -76,7 +76,7 @@ def main_quiz(question_answer_pairs):
 
     for i in range(num_questions):
         question, correct_answer, possible_answers = question_answer_pairs[i]
-        print(question)
+        print(f"{question}\n")
        
         random.shuffle(possible_answers)
 
@@ -86,11 +86,11 @@ def main_quiz(question_answer_pairs):
         user_answer = get_user_answer(possible_answers)
 
         if user_answer == possible_answers.index(correct_answer) + 1:
-            print("Correct!")
+            print("\nCorrect!")
             score += 1
         else:
-            print(f"The correct answer is: {correct_answer}")
-        print("----------------------------------------------------")
+            print(f"\nThe correct answer is: {correct_answer}")
+        print("---------------------------------------------------------------------------------\n")
     return score
 
 
@@ -116,10 +116,11 @@ def main():
     while True:
         question_answer_pairs = get_questions_from_sheet(data);
         score = main_quiz(question_answer_pairs)
-        print(f"Your final score: {score}/10!")
+        print(f"Your final score: {score}/10!\n")
 
         if play_again():
             print("Great! Let's play again!\n")
+            print("---------------------------------------------------------------------------------\n")
         else: 
             print("Thank you for playing. Goodbye!")
             break
