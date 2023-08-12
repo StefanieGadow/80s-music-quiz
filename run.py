@@ -70,6 +70,11 @@ def get_user_answer(possible_answers):
 
 
 def main_quiz(question_answer_pairs):
+    """
+    Run the main quiz loop, asking the user 10 questions and evvaluate their answers.
+    Args: question_answer_pairs (list): A list of tuples containing question, possible answers and correct answer.
+    Returns: int: The user's final score, indicating how many questions they have answered correctly.
+    """
     score = 0
     num_questions = 10
     random.shuffle(question_answer_pairs)
@@ -110,6 +115,9 @@ def play_again():
 
 
 def main():
+    """
+    Start the 80's Music Quiz game, displaying the welcome message, rules, and managing the quiz flow.
+    """
     print_logo()
     display_rules()
 
