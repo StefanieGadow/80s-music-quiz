@@ -55,6 +55,20 @@ def get_questions_from_sheet(data):
     return question_answer_pairs
 
 
+def get_user_answer(possible_answers):
+    """
+    Get the user's answer and validate it.
+    """
+    while True:
+        try:
+            user_answer = int(input("Your answer (enter the option numer): "))
+            if 1 <= user_answer <= len(possible_answers):
+                return user_answer
+            else: print("Please enter a valid option number.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+
 def main_quiz(question_answer_pairs):
     score = 0
     num_questions = 10
@@ -69,7 +83,7 @@ def main_quiz(question_answer_pairs):
         for i, ans in enumerate(possible_answers, 1):
             print(f"{i}. {ans}")
 
-        user_answer = int(input("Your answer (enter the option numer): "))
+        user_answer = get_user_answer(possible_answers)
 
         if user_answer == possible_answers.index(correct_answer) + 1:
             print("Correct!")
