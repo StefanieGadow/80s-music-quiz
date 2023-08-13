@@ -71,3 +71,35 @@ In order to visualise the steps required in the game, I created a flow chart usi
 - Add more questions to the document to encourage playing several rounds.
 - Create easy, medium, and hard difficulty levels to make the game more interesting.
 
+## Google API
+
+The questions, possible answers and correct answers are stored in a Google Sheet. The spreadsheet is accessed by the game through the Google Drive and Google Sheets APIs on the Google Cloud Platform.  
+
+Credentials were generated and provided to allow access from the game to Google Sheets. These were added to the creds.json. The creds.json file was added to the .gitignore file to ensure the credentials were not pushed to the Github repository. The credentials were added to the Config Vars on Heroku to ensure they can be accessed when running the game.
+
+## Testing
+
+### PEP8 Testing
+
+The Python file has been passed through the CI Python Linter. There were no errors reported.
+
+![Python Linter outcome](/readme_images/pep8.png)
+
+### Input Testing
+
+All user inputs were tested thoroughly to ensure all input data is handled correctly and appropriate feedback is given to the user. 
+
+- Answer selection:
+  User input that does not match one of the answer options is not accepted and returns an appropriate error message to the user.
+- Play again selection:
+  All input other than “yes” or “no” returns an appropriate error message to the user. It does not matter if the user uses lower or uppercase letters.
+
+### Other Game Testing
+
+The game was tested thoroughly to ensure the following features work as intended:
+- The questions are randomised for each game. 
+- The possible answers are randomised before they are displayed.
+- The game ends after 10 questions and displays the final score to the user.
+- The terminal clears if the user chooses to play again.
+
+All of the above tests were completed in my local terminal and also in the Heroku terminal.
