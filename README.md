@@ -5,7 +5,7 @@ Users are asked 10 questions with four possible answers. Each correct answer add
 
 The live version can be found [here](https://music-quiz-b966ebd26850.herokuapp.com/).
 
-=> image
+![Mockup](/readme_images/mockup.png)
 
 ## How to play
 
@@ -30,4 +30,44 @@ As a user, I want to:
 
 In order to visualise the steps required in the game, I created a flow chart using Lucidchart. It proved to be very beneficial as it allowed me to gain an understanding of what functions were required for the game.
 
-=> image
+![Flowchart](/readme_images/flowchart.png)
+
+## Features
+
+### Existing features
+
+- Welcome screen  
+  The user is greeted by a welcome screen that shows the game’s name in ASCII text.
+  ![ASCII logo](/readme_images/ascii-logo.png)  
+
+- Rules  
+  The rules of the game are displayed underneath the ASCII logo.
+  ![Rules of the game](/readme_images/rules.png)  
+
+- Random choice of questions  
+  The quiz chooses 10 random questions out of 30 questions that were defined in the Google Sheets document.
+
+- Accepts user input  
+  The user must input a number corresponding to the answer after each question.
+  ![Example of user input](/readme_images/user-input.png)  
+
+- Calculates a score  
+  Each correct answer adds one point to the score. The player can achieve a maximum score of 10/10. The user will be presented with their final score after the 10th question is answered.
+  ![Final score](/readme_images/final-score.png)  
+
+- After the game, the user will be asked if they want to play again.  
+  ![Play again screen](/readme_images/play-again.png)
+
+- Input validation and error-checking  
+  The player cannot enter answer options lower than 1 or higher than 4.
+  The player must enter numbers to choose an answer.
+  ![Input validation for questions](/readme_images/validate-answer.png)  
+
+  When the player is asked if they want to play again, the quiz only accepts “yes” or “no”.
+  ![Input validation for play again question](/readme_images/invalid-play.png)
+
+### Future features
+
+- Add more questions to the document to encourage playing several rounds.
+- Create easy, medium, and hard difficulty levels to make the game more interesting.
+
