@@ -162,3 +162,5 @@ The site is now live and operational.
 ## Credits
 
 The Code Institute walkthrough project “Love sandwiches” was used to set up the Google APIs and to deploy the project on Heroku.
+
+[ChatGPT](https://chat.openai.com/) for the questions and answer options.
