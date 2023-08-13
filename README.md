@@ -103,3 +103,55 @@ The game was tested thoroughly to ensure the following features work as intended
 - The terminal clears if the user chooses to play again.
 
 All of the above tests were completed in my local terminal and also in the Heroku terminal.
+
+## Libraries and Technologies Used
+
+### Python libraries
+	
+- [random](https://docs.python.org/3/library/random.html?highlight=random#module-random): random is used to choose the 10 questions for the game and to randomize the possible answers for each question
+- [os](https://docs.python.org/3/library/os.html?highlight=os#module-os): os.system is used to clear the terminal when the user wants to play again
+- [gspread](https://pypi.org/project/gspread/): to allow communication with Google Sheets
+- [google.oauth2.service_account](https://google-auth.readthedocs.io/en/stable/index.html): used to validate credentials and grant access to Google service accounts.
+
+### Technologies
+
+- [Github](https://github.com/): used for version control
+- [Gitpod](https://gitpod.io/): used to develop the project and organise version control.
+- [Heroku](https://heroku.com): used to deploy the live project
+- [Lucidchart](https://lucid.app/): used to create the game flowchart
+- [CI Python Linter](https://pep8ci.herokuapp.com/): used to validate the Python code
+- [ASCII-Generator](https://ascii-generator.site/t/): used to create the ASCII logo
+
+## Bugs
+
+No remaining bugs.
+
+## Deployment
+
+The project was deployed via Heroku and can be found [here](https://music-quiz-b966ebd26850.herokuapp.com/).  
+
+Before deploying to Heroku, pip3 freeze > requirements.txt was used to add all the dependencies required to the requirements.txt file. This is required for the game to run on Heroku.  
+
+The following steps were then taken:
+
+1.	Log in to Heroku or create an account.
+2.	On the main page, click "Create New App".
+3.	Enter a unique and meaningful app name.
+4.	Next, select your region.
+5.	Click on the Create App button.
+6.	Click on the Settings Tab and scroll down to Config Vars.
+7.	Click Reveal Config Vars, enter CREDS into the Key box and the content of the creds.json into the Value box, and click the Add button.
+8.	Next, scroll down to the Buildpack section, click Add Buildpack select Python and click Save Changes.
+9.	Repeat step 8 to add node.js. Note: The Buildpacks must be in the correct order. If not, click and drag them to move into the correct order.
+10.	Scroll to the top of the page and choose the Deploy tab.
+11.	Select Github as the deployment method.
+12.	Confirm you want to connect to GitHub.
+13.	Search for the repository name and click the connect button.
+14.	Scroll to the bottom of the deploy page and either click Enable Automatic Deploys for automatic deploys or Deploy Branch to deploy manually. Manually deployed branches will need re-deploying each time the repo is updated.
+15.	Click View to view the deployed site.  
+
+The site is now live and operational.
+
+## Credits
+
+The Code Institute walkthrough project “Love sandwiches” was used to set up the Google APIs and to deploy the project on Heroku.
