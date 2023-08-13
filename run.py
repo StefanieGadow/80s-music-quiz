@@ -93,8 +93,9 @@ class MusicQuizGame:
         random.shuffle(question_answer_pairs)
 
         for i in range(num_questions):
-            question, correct_answer, possible_answers =
-            question_answer_pairs[i]
+            question, correct_answer, possible_answers = (
+                question_answer_pairs[i]
+            )
             print(f"{question}\n")
             random.shuffle(possible_answers)
 
@@ -132,8 +133,9 @@ class MusicQuizGame:
         self.display_rules()
 
         while True:
-            question_answer_pairs = self.
-            get_questions_from_sheet(MusicQuizGame.data)
+            question_answer_pairs = (
+                self.get_questions_from_sheet(MusicQuizGame.data)
+            )
             self.score = self.main_quiz(question_answer_pairs)
             print(f"Your final score: {self.score}/10!\n")
 
