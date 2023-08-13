@@ -5,6 +5,12 @@ import os
 
 
 class MusicQuizGame:
+    """
+    This class represents the 80's Music Quiz game. It allows players to
+    participate in a quiz where they answer questions about music from the
+    1980s. Players are presented with a set of questions, select answers,
+    and receive scores based on their accuracy.
+    """
     SCOPE = [
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive.file",
@@ -68,6 +74,9 @@ class MusicQuizGame:
     def get_user_answer(self, possible_answers):
         """
         Get the user's answer and validate it.
+        Args: possible_answers (list): List of possible answers to the
+        question.
+        Returns: int: The user's selected answer as an option number.
         """
         while True:
             try:
@@ -129,6 +138,12 @@ class MusicQuizGame:
                 print('Please enter "yes" or "no".')
 
     def play(self):
+        """
+        Start the Music Quiz game.
+        This method initiates the game loop, where players are presented with
+        questions, their answers are evaluated, and scores are calculated.
+        Players can choose to play again or exit the game.
+        """
         self.print_logo()
         self.display_rules()
 
@@ -151,8 +166,8 @@ class MusicQuizGame:
 
 def main():
     """
-    Start the 80's Music Quiz game, displaying the welcome message, rules,
-    and managing the quiz flow.
+    Start the 80's Music Quiz game.
+    This function initializes a new game instance and starts the game loop.
     """
     player1 = MusicQuizGame()
     player1.play()
