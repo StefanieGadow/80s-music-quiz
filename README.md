@@ -77,6 +77,12 @@ The questions, possible answers and correct answers are stored in a Google Sheet
 
 Credentials were generated and provided to allow access from the game to Google Sheets. These were added to the creds.json. The creds.json file was added to the .gitignore file to ensure the credentials were not pushed to the Github repository. The credentials were added to the Config Vars on Heroku to ensure they can be accessed when running the game.
 
+## Data model
+
+To use principles of Object-Oriented Programming, a MusicQuizGame class was created. This class is responsible for controlling the flow of the game. It contains methods for the general running of the game, such as displaying the ASCII logo, displaying rules, choosing questions, taking user guesses, displaying feedback on user guesses, updating the score and restarting the game.
+
+By using a class, the game’s behaviour and data are encapsulated within instances of the class. Each player can have their game instance, allowing them to play independently without interfering with each other’s progress. This approach provides better organization, separation of concerns, and potential for code reusability and extensibility.
+
 ## Testing
 
 ### PEP8 Testing
@@ -101,6 +107,7 @@ The game was tested thoroughly to ensure the following features work as intended
 - The possible answers are randomised before they are displayed.
 - The game ends after 10 questions and displays the final score to the user.
 - The terminal clears if the user chooses to play again.
+- The game was run on two devices simultaneously to ensure that multiple people could play the game at the same time.
 
 All of the above tests were completed in my local terminal and also in the Heroku terminal.
 
