@@ -125,7 +125,7 @@ All of the above tests were completed in my local terminal and also in the Herok
 - [Github](https://github.com/): used for version control
 - [Gitpod](https://gitpod.io/): used to develop the project and organise version control.
 - [Heroku](https://heroku.com): used to deploy the live project
-- [Lucidchart](https://lucid.app/): used to create the game flowchart
+- [Adobe XD](https://helpx.adobe.com/de/support/xd.html): used to create the game flowchart
 - [CI Python Linter](https://pep8ci.herokuapp.com/): used to validate the Python code
 - [ASCII-Generator](https://ascii-generator.site/t/): used to create the ASCII logo
 
@@ -163,4 +163,4 @@ The site is now live and operational.
 
 The Code Institute walkthrough project “Love sandwiches” was used to set up the Google APIs and to deploy the project on Heroku.
 
-[ChatGPT](https://chat.openai.com/) for the questions and answer options.
+[ChatGPT](https://chat.openai.com/) was used to generate 30 questions and four answer options for each question.
