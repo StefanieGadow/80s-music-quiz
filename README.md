@@ -28,7 +28,9 @@ As a user, I want to:
 
 ## Logic Flow
 
-In order to visualise the steps required in the game, I created a flow chart using Lucidchart. It proved to be very beneficial as it allowed me to gain an understanding of what functions were required for the game.
+In order to visualise the steps required in the game, I created a flow chart using Adobe XD. It proved to be very beneficial as it allowed me to gain an understanding of what functions were required for the game.
+
+As the flow chart was created at the outset of the project, it does not fully reflect all elements of the game.
 
 ![Flowchart](/readme_images/flowchart.png)
 
@@ -63,7 +65,7 @@ In order to visualise the steps required in the game, I created a flow chart usi
   The player must enter numbers to choose an answer.
   ![Input validation for questions](/readme_images/validate-answer.png)  
 
-  When the player is asked if they want to play again, the quiz only accepts “yes” or “no”.
+  When the player is asked if they want to play again, the quiz only accepts “yes” or “no”. It makes no difference if the words are capitalized or not.
   ![Input validation for play again question](/readme_images/invalid-play.png)
 
 ### Future features
